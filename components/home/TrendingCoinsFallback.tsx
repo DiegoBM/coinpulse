@@ -1,6 +1,6 @@
 import DataTable from "@/components/DataTable";
 
-export const TrendingCoinsFallback = () => {
+export default function TrendingCoinsFallback() {
   const columns = [
     {
       header: "Name",
@@ -39,4 +39,4 @@ export const TrendingCoinsFallback = () => {
       />
     </div>
   );
-};
+}

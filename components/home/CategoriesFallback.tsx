@@ -1,6 +1,6 @@
 import DataTable from "@/components/DataTable";
 
-export const CategoriesFallback = () => {
+export default function CategoriesFallback() {
   const columns = [
     {
       header: "Category",
@@ -53,4 +53,4 @@ export const CategoriesFallback = () => {
       />
     </div>
   );
-};
+}
