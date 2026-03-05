@@ -35,7 +35,7 @@ export async function fetcher<T>(
       .catch(() => ({}));
 
     throw new Error(
-      `API Error: ${response.status}: ${errorBody.error ?? response.statusText}`,
+      `API Error: ${response.status}: ${errorBody.error ? JSON.stringify(errorBody.error) : response.statusText}`,
     );
   }
 
