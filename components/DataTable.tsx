@@ -49,7 +49,11 @@ export default function DataTable<T>({
             {columns.map((column, columnIndex) => (
               <TableCell
                 key={columnIndex}
-                className={cn("py-4 first:pl-5 last:pr-5", bodyCellClassName)}
+                className={cn(
+                  "py-4 first:pl-5 last:pr-5",
+                  bodyCellClassName,
+                  column.cellClassName,
+                )}
               >
                 {column.cell(row, rowIndex)}
               </TableCell>

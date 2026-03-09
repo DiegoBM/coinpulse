@@ -3,6 +3,8 @@ import CoinOverview from "@/components/home/CoinOverview";
 import TrendingCoins from "@/components/home/TrendingCoins";
 import CoinOverviewFallback from "@/components/home/CoinOverviewFallback";
 import TrendingCoinsFallback from "@/components/home/TrendingCoinsFallback";
+import Categories from "@/components/home/Categories";
+import CategoriesFallback from "@/components/home/CategoriesFallback";
 
 export default function Page() {
   return (
@@ -11,12 +13,15 @@ export default function Page() {
         <Suspense fallback={<CoinOverviewFallback />}>
           <CoinOverview />
         </Suspense>
+
         <Suspense fallback={<TrendingCoinsFallback />}>
           <TrendingCoins />
         </Suspense>
       </section>
       <section className="w-full mt-7 space-y-4">
-        <p>Categories</p>
+        <Suspense fallback={<CategoriesFallback />}>
+          <Categories />
+        </Suspense>
       </section>
     </main>
   );
